@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero-group">
+    <img src="https://webdev.acm.jhu.edu/assets/cena.jpg" alt="Cohn Jena" class="hero-headshot" />
+    <div class="hero-text">
+      <h1 class="hero-heading">Hi! I'm John</h1>
+      <h2 class="hero-subheading">I enjoy <em>Web Design</em> <span class="pipe"></span></h2>
+    </div>
+  </div>
+  <ul class="hero-actions">
+    <li><a href="#" class="pill-btn"><i class="fa fa-file"></i> Resume</a></li>
+    <li><a href="#" class="pill-btn"><i class="fa fa-envelope"></i> Contact</a></li>
+  </ul>
+</div>
+
+<div class="content">
+{% for post in site.posts %}
+  <div class="content-group">
+    <div class="content-header">
+      <h3 class="content-heading">{{post.title}}</h3>
+      <h4 class="content-subheading">{{ post.date | date: "%b %-d, %Y" }}</h4>
+    </div>
+    <div class="content-body">
+      {{post.excerpt}}
+      <div class="content-actions">
+        <a href="{{post.url}}" class="pill-btn">Read More</a>
+      </div>
+    </div>
+  </div>
+{%endfor%}
+</div>

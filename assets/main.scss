@@ -1,0 +1,128 @@
+---
+---
+
+$bg-color: #6b4669;
+$bg-highlight-color: #f7b7f4;
+$bg-dark-color: #4d314b;
+$fg-color: #c5afc4;
+$fg-inverted-color: #80547e;
+$fg-text-color: #e4cfe3;
+$highlight-color: #eebc4f;
+
+body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), transparent)
+              0 0 / 100% 250px
+              no-repeat
+              $bg-color;
+  max-width: 944px;
+  margin: 0 auto;
+}
+
+.header:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.header-logo,
+.header-logo:visited,
+.header-logo:hover {
+  background: $bg-highlight-color;
+  color: $bg-color;
+  display: block;
+  padding: .5rem;
+  border-radius: 100%;
+  float: left;
+  text-decoration: none;
+  font: normal 1.8rem/1.8rem 'Gobold Bold';
+}
+
+.header-nav {
+  float: right;
+}
+
+.header-nav:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.header-nav li {
+  float: left;
+}
+
+.hero {
+  background: url('https://webdev.acm.jhu.edu/assets/laptop.png')
+              center bottom no-repeat;
+  min-height: 190px;
+  padding-bottom: 190px;
+}
+
+.hero-group,
+.hero-actions {
+  // NOTE: TELL THEM that this is to center non-fixed with divs
+  display: flex;
+  justify-content: center;
+}
+
+.hero-headshot {
+  border-radius: 100%;
+  border: 3px solid $bg-highlight-color;
+  margin-right: 1rem;
+}
+
+.hero-heading {
+  color: $bg-highlight-color;
+  font: normal 2rem/2rem 'Gobold Bold';
+  text-transform: uppercase;
+}
+
+.hero-subheading {
+  color: $highlight-color;
+  font: normal 1.5rem/2rem 'Montserrat';
+}
+
+.hero-subheading em {
+  color: white; // TODO
+}
+
+.pipe {
+  display: inline-block;
+  width: 2px;
+  height: 2rem;
+  background: white; // TODO
+  vertical-align: top;
+}
+
+.content {
+  background: $fg-color;
+  border-top: 3px solid $highlight-color;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, .25);
+  padding-bottom: 1rem;
+}
+
+.content-group {
+  margin-bottom: 1rem;
+}
+
+.content-header {
+  padding: 2rem;
+}
+
+.content-heading {
+  color: $bg-dark-color;
+  font: normal 1.7rem/2rem 'Gobold Thin';
+  letter-spacing: 0.1rem;
+}
+
+.content-body {
+  background: $fg-inverted-color;
+  border-top: 3px solid $bg-color;
+  color: $fg-text-color;
+  font: normal 1rem/1.7rem 'Montserrat';
+  padding: 3rem;
+}
+
+.footer {
+  text-align: center;
+}
